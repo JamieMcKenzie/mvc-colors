@@ -1,0 +1,2 @@
+ColorApp.View = {};
+
