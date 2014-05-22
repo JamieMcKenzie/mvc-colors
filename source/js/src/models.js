@@ -1,8 +1,8 @@
 var ColorApp = {};
 
 function Grid() {
-  this.size = this.tiles.size;
   this.tiles = new Array();
+  this.size = this.tiles.length;
 }
 
 function Tile() {
@@ -12,6 +12,7 @@ function Tile() {
 Grid.prototype = {
   addTile: function(){
     this.tiles.push(new Tile());
+    this.size = this.tiles.length;
   },
 
   removeTile: function(){
