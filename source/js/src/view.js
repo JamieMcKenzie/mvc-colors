@@ -4,8 +4,18 @@ ColorApp.View = function(opts){
 
 ColorApp.View.prototype = {
   update: function(data){
-    if (data){
-      console.log(data);
-    }
+            if (data){
+              this.updateGridImage(data);
+            }
+  },
+
+  updateGridImage: function(data) {
+                      if (data.grid) {
+                        for (var i = 0; i < data.grid.size; i++) {
+                          $('.wrapper ul').append( "<li></li>" );
+                        }
+                      }
   }
 }
+
+
