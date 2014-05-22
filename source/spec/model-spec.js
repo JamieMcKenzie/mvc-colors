@@ -5,10 +5,10 @@ describe ("Grid", function(){
   });
 })
 
-
 describe ("Tile", function(){
   it("should return a tile object", function(){
     var tile = new Tile();
     expect(tile).toBeDefined();
   });
 })
+
