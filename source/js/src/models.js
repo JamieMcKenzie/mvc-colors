@@ -1,11 +1,11 @@
 var ColorApp = {};
 
-function Grid(){
+function Grid() {
   this.size = 0;
   this.tiles = new Array();
 }
 
-function Tile(){
+function Tile() {
   this.color = "#ffffff";
 }
 
@@ -16,12 +16,6 @@ Grid.prototype = {
 
   removeTile: function(){
     this.tiles.pop()
-  }
+  },
 
-}
-
-Tile.prototype = {
-  changeColor: function(){
-    this.color = ;
-  }
 }
