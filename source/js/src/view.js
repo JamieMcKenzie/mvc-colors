@@ -1,4 +1,6 @@
-ColorApp.View = {};
+ColorApp.View = function(opts){
+  this.opts = opts;
+}
 
 ColorApp.View.prototype = {
   update: function(data){
