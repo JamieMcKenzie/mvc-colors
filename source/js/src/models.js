@@ -1,8 +1,8 @@
 var ColorApp = {};
 
-function Grid() {
-  this.tiles = new Array();
-  this.size = this.tiles.length;
+function Grid(size) {
+  this.size = size || 25;
+  this.tiles = new Array(this.size);
 }
 
 function Tile() {
