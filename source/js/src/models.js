@@ -1,27 +1,22 @@
 var ColorApp = {};
 
-function Grid(){
-  this.size = 0;
+function Grid() {
   this.tiles = new Array();
+  this.size = this.tiles.length;
 }
 
-function Tile(){
+function Tile() {
   this.color = "#ffffff";
 }
 
 Grid.prototype = {
   addTile: function(){
     this.tiles.push(new Tile());
+    this.size = this.tiles.length;
   },
 
   removeTile: function(){
     this.tiles.pop()
-  }
+  },
 
-}
-
-Tile.prototype = {
-  changeColor: function(){
-    this.color = ;
-  }
 }
