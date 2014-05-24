@@ -25,8 +25,8 @@ ColorApp.Binder.prototype = {
                           $("li").on('click', function(e){
                             controller.colorTile(e);
                           })
+  },
 
 
-  }
 
 }

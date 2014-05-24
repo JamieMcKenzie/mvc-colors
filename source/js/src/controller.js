@@ -7,7 +7,6 @@ ColorApp.Controller.prototype = {
               this.grid = new Grid();
               this.populateGrid(this.grid);
               this.view.update(this);
-              console.log("new grid!")
   },
 
   populateGrid: function(grid) {
@@ -17,7 +16,10 @@ ColorApp.Controller.prototype = {
   },
 
   colorTile: function(e) {
-                e.target.style.backgroundColor=this.randColor();
+                var index = e.target.getAttribute('id');
+                var newColor = this.randColor();
+                this.grid.tiles[index].setColor(newColor);
+                this.view.setColor(this, index);
   },
 
   randColor: function(){
