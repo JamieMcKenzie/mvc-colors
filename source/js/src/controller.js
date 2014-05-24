@@ -1,5 +1,6 @@
 ColorApp.Controller = function(config){
   this.view = config.view;
+  this.gridCollection = new GridCollection();
 };
 
 ColorApp.Controller.prototype = {
@@ -28,7 +29,7 @@ ColorApp.Controller.prototype = {
 
   saveGrid: function(e){
                 this.grid.name = ($("#formValueID").val());
-
+                this.gridCollection.grids.push(this.grid);
   },
 
 }

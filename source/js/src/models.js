@@ -1,5 +1,9 @@
 var ColorApp = {};
 
+function GridCollection() {
+  this.grids = new Array();
+}
+
 function Grid(size) {
   this.name = "";
   this.size = size || 16;
