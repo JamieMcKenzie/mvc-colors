@@ -7,6 +7,7 @@ ColorApp.Binder.prototype = {
   bind: function(){
           this.bindClearGridAction();
           this.bindColorTileAction();
+          this.bindSaveGridAction();
   },
 
   bindClearGridAction: function(){

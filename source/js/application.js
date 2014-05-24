@@ -2,8 +2,7 @@ $('document').ready(function(){
   var selectors = {
     makeGridAction: "button.new",
     clearGridAction: "button.clear",
-    saveGridAction: "button.save",
-    tileSelector: "li",
+    saveGridAction: "submit",
   };
 
   ColorApp.view = new ColorApp.View( {
