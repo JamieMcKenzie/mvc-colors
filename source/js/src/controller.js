@@ -3,10 +3,16 @@ ColorApp.Controller = function(config){
 };
 
 ColorApp.Controller.prototype = {
-  makeGrid: function(e) {
+  makeGrid: function() {
               this.grid = new Grid();
+              this.populateGrid(this.grid);
               this.view.update(this);
-              console.log(this.grid);
+  },
+
+  populateGrid: function(grid) {
+                  for (var i = 0; i <= grid.size; i++){
+                    grid.addTile();
+                  }
   },
 
 }
