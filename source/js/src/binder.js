@@ -3,8 +3,8 @@ ColorApp.Binder = function(targets, controller){
   this.controller = controller;
 }
 
-ColorApp.Binder.prototype = function(){
+ColorApp.Binder.prototype = {
   bind: function(){
-    console.log("bound!");
-  }
+    // console.log(this.targets.makeGridAction);
+  },
 }

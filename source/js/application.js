@@ -1,5 +1,6 @@
 $('document').ready(function(){
   var selectors = {
+    makeGridAction: "button.new",
     saveGridAction: "button.save",
     clearGridAction: "button.clear",
   };
@@ -11,7 +12,6 @@ $('document').ready(function(){
 
   ColorApp.controller = new ColorApp.Controller({view: ColorApp.view});
   ColorApp.controller.makeGrid();
-  console.log("makegrid fired");
 
   ColorApp.binder = new ColorApp.Binder(selectors, ColorApp.controller);
   ColorApp.binder.bind();
