@@ -3,6 +3,7 @@ $('document').ready(function(){
     makeGridAction: "button.new",
     clearGridAction: "button.clear",
     saveGridAction: "button.save",
+    tileSelector: "li",
   };
 
   ColorApp.view = new ColorApp.View( {
@@ -11,7 +12,7 @@ $('document').ready(function(){
   });
 
   ColorApp.controller = new ColorApp.Controller({view: ColorApp.view});
-  ColorApp.controller.makeGrid();
+  ColorApp.controller.makeNewGrid();
 
   ColorApp.binder = new ColorApp.Binder(selectors, ColorApp.controller);
   ColorApp.binder.bind();

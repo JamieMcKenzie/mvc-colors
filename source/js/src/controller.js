@@ -3,7 +3,7 @@ ColorApp.Controller = function(config){
 };
 
 ColorApp.Controller.prototype = {
-  makeGrid: function() {
+  makeNewGrid: function() {
               this.grid = new Grid();
               this.populateGrid(this.grid);
               this.view.update(this);
@@ -16,6 +16,15 @@ ColorApp.Controller.prototype = {
                   }
   },
 
+  colorTile: function(e) {
+                e.target.style.backgroundColor=this.randColor();
+  },
+
+  randColor: function(){
+                return "#" + Math.floor(Math.random()*16777215).toString(16);
+  }
+
 }
+
 
 
