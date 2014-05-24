@@ -1,8 +1,8 @@
 $('document').ready(function(){
   var selectors = {
     makeGridAction: "button.new",
-    saveGridAction: "button.save",
     clearGridAction: "button.clear",
+    saveGridAction: "button.save",
   };
 
   ColorApp.view = new ColorApp.View( {

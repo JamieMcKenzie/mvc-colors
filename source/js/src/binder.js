@@ -5,6 +5,22 @@ ColorApp.Binder = function(targets, controller){
 
 ColorApp.Binder.prototype = {
   bind: function(){
-    // console.log(this.targets.makeGridAction);
+          this.bindMakeGridAction();
+          this.bind
   },
+
+  bindMakeGridAction: function(){
+                        var controller = this.controller,
+                        but = this.targets.makeGridAction;
+
+                        $(but).on('click', function(e){
+                          controller.makeGrid();
+                          });
+  },
+
+  bindClearGridAction: function(){
+                          var controller = this.controller,
+                          but = this.targets.
+  }
+
 }

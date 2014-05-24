@@ -7,6 +7,7 @@ ColorApp.Controller.prototype = {
               this.grid = new Grid();
               this.populateGrid(this.grid);
               this.view.update(this);
+              console.log("new grid!")
   },
 
   populateGrid: function(grid) {
