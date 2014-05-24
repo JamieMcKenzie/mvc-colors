@@ -1,9 +1,10 @@
 ColorApp.Controller = function(config){
   this.view = config.view;
+  this.gridCollection = new GridCollection();
 };
 
 ColorApp.Controller.prototype = {
-  makeGrid: function() {
+  makeNewGrid: function() {
               this.grid = new Grid();
               this.populateGrid(this.grid);
               this.view.update(this);
@@ -15,6 +16,23 @@ ColorApp.Controller.prototype = {
                   }
   },
 
+  colorTile: function(e) {
+                var index = e.target.getAttribute('id');
+                var newColor = this.randColor();
+                this.grid.tiles[index].setColor(newColor);
+                this.view.setColor(this, index);
+  },
+
+  randColor: function(){
+                return "#" + Math.floor(Math.random()*16777215).toString(16);
+  },
+
+  saveGrid: function(e){
+                this.grid.name = ($("#formValueID").val());
+                this.gridCollection.grids.push(this.grid);
+  },
+
 }
+
 
 

@@ -5,6 +5,39 @@ ColorApp.Binder = function(targets, controller){
 
 ColorApp.Binder.prototype = {
   bind: function(){
-    // console.log(this.targets.makeGridAction);
+          this.bindClearGridAction();
+          this.bindColorTileAction();
+          this.bindSaveGridAction();
   },
+
+  bindClearGridAction: function(){
+                          var controller = this.controller,
+                          but = this.targets.clearGridAction;
+
+                          $(but).on('click', function(){
+                            controller.makeNewGrid();
+                          })
+  },
+
+  bindColorTileAction: function(){
+                          var controller = this.controller,
+                          but = this.targets.tileSelector;
+
+                          $("li").on('click', function(e){
+                            controller.colorTile(e);
+                          })
+  },
+
+  bindSaveGridAction: function(){
+                          var controller = this.controller,
+                          but = this.targets.saveGridAction;
+
+                          $("form").submit(function(e) {
+                            controller.saveGrid(e);
+                            e.preventDefault();
+                          })
+  },
+
+
+
 }

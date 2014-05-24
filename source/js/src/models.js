@@ -1,6 +1,11 @@
 var ColorApp = {};
 
+function GridCollection() {
+  this.grids = new Array();
+}
+
 function Grid(size) {
+  this.name = "";
   this.size = size || 16;
   this.tiles = new Array();
 }
@@ -18,4 +23,10 @@ Grid.prototype = {
     this.tiles.pop()
   },
 
+}
+
+Tile.prototype = {
+  setColor: function(color){
+    this.color = color
+  }
 }
