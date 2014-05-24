@@ -28,6 +28,16 @@ ColorApp.Binder.prototype = {
                           })
   },
 
+  bindSaveGridAction: function(){
+                          var controller = this.controller,
+                          but = this.targets.saveGridAction;
+
+                          $("form").submit(function(e) {
+                            controller.saveGrid(e);
+                            e.preventDefault();
+                          })
+  },
+
 
 
 }

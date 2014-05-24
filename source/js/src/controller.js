@@ -24,7 +24,12 @@ ColorApp.Controller.prototype = {
 
   randColor: function(){
                 return "#" + Math.floor(Math.random()*16777215).toString(16);
-  }
+  },
+
+  saveGrid: function(e){
+                this.grid.name = ($("#formValueID").val());
+
+  },
 
 }
 

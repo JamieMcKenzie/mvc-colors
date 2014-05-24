@@ -1,6 +1,7 @@
 var ColorApp = {};
 
 function Grid(size) {
+  this.name = "";
   this.size = size || 16;
   this.tiles = new Array();
 }
