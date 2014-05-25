@@ -10,12 +10,12 @@ describe ("Grid", function(){
     expect(grid).toBeDefined();
   });
 
-  it("should be initialized with an array, default size 16", function() {
-    expect(grid.tiles.length).toEqual(16);
+  it("should be initialized with an array", function() {
+    expect(grid.tiles).toEqual([]);
   });
 
-  it("should be initialized with a size of 16 by default", function(){
-    expect(grid.size).toEqual(16);
+  it("should be initialized with a size of 15 by default", function(){
+    expect(grid.size).toEqual(15);
   });
 
   describe("addTile", function(){
@@ -25,7 +25,7 @@ describe ("Grid", function(){
 
     it("should add a tile to the grid", function(){
       grid.addTile();
-      expect(grid.size).toEqual(17);
+      expect(grid.tiles.length).toEqual(1);
     })
   });
 
@@ -36,7 +36,7 @@ describe ("Grid", function(){
 
     it("should remove a tile from the grid", function(){
       grid.removeTile();
-      expect(grid.size).toEqual(16);
+      expect(grid.tiles.length).toEqual(0);
     })
   });
 
@@ -49,8 +49,8 @@ describe ("Grid", function(){
     grid = new Grid(6);
   })
 
-  it("should be initialized with an array of 6", function() {
-    expect(grid.tiles.length).toEqual(6);
+  it("should be initialized with an empty array", function() {
+    expect(grid.tiles.length).toEqual(0);
   });
 
   it("should be initialized with a set size of 6", function(){
