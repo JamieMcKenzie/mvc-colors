@@ -6,7 +6,7 @@ function GridCollection() {
 
 function Grid(size) {
   this.name = "";
-  this.size = size || 16;
+  this.size = size || 15;
   this.tiles = new Array();
 }
 
