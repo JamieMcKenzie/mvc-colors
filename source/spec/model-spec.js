@@ -14,8 +14,8 @@ describe ("Grid", function(){
     expect(grid.tiles).toEqual([]);
   });
 
-  it("should be initialized with a size of 15 by default", function(){
-    expect(grid.size).toEqual(15);
+  it("should be initialized with a size of 16 by default", function(){
+    expect(grid.size).toEqual(16);
   });
 
   describe("addTile", function(){
