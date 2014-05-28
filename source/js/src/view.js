@@ -13,7 +13,7 @@ ColorApp.View.prototype = {
   updateGridImage: function(data) {
                       if (data.grid) {
                         for (var i = 0; i < data.grid.size; i++) {
-                          $('.wrapper ul').append( "<li id=" + i + "></li>" );
+                          $(this.opts.gridSelector).append( "<li id=" + i + "></li>" );
                           this.setColor(data, i);
                         }
                       }
@@ -21,7 +21,7 @@ ColorApp.View.prototype = {
 
   setColor: function(data, index) {
                 var n = +index + 1;
-                $("li:nth-child( " + n + " )").css("background-color", data.grid.tiles[index].color)
+                $(this.opts.tileSelector + ":nth-child( " + n + " )").css("background-color", data.grid.tiles[index].color)
   },
 
 }
