@@ -6,14 +6,12 @@ ColorApp.View.prototype = {
   update: function(data){
             if (data){
               this.updateGridImage(data);
-            };
-
-            if(data.gridCollection.length > 0){
-              console.log("hi?");
-              var gallery = data.gridCollection;
-              for (var i = 0; i < gallery.length; i++){
-                console.log(gallery[i]);
-                // this.updateGridImage(gallery[i]);
+              if (data.gridCollection.grids.length > 0){
+                var gallery = data.gridCollection.grids;
+                for (var i = 0; i < gallery.length; i++){
+                  console.log(gallery[i]);
+                  // this.updateGridImage(gallery[i]);
+                }
               }
             };
   },
