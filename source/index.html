@@ -14,25 +14,33 @@
   <title>Colors</title>
 </head>
 <body>
-  <button class="clear">Clear</button>
-  <button class="save">Save</button>
+<div class="wrapper">
+  <div class="header">
 
-  <form>
-    Save State Title: <input type="text" id="formValueID" name="nombre">
-    <input type="submit" id="submitButton" value="Submit">
-  </form>
+    <div class="logo">
+      <h1>Colors</h1>
+    </div>
+
+    <form>
+      <input type="text" id="formValueID" name="nombre" placeholder="Grid Title">
+      <input type="submit" id="submitButton" value="Save Grid">
+      <button class="clear">Clear</button>
+    </form>
 
 
+  </div>
 
-  <div class="wrapper">
+  <div class="grid">
     <ul>
 
     </ul>
   </div>
 
-  <div class="logo">
-    <h1>Colors</h1>
+  <div class= "savedGrids">
+
   </div>
+
+</div>
 
 </body>
 </html>

@@ -6,7 +6,7 @@ $('document').ready(function(){
   };
 
   ColorApp.view = new ColorApp.View( {
-    gridSelector: "ul",
+    gridSelector: ".grid ul",
     tileSelector: "li",
   });
 
