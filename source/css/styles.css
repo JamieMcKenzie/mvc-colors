@@ -5,7 +5,6 @@ body {
   font-weight: 200;
   height: 800px;
   line-height: 50px;
-  margin: 0 auto;
   min-width: 550px;
 }
 
@@ -20,19 +19,11 @@ h1 {
   font-weight: 200;
 }
 
-button {
-  background-color: black;
-  border: none;
-  color: white;
-  display: inline;
-  height: 50px;
-  font-size: 1.25em;
-  font-weight: 200;
-  margin: 0px auto;
-  margin-top: 10px;
-  padding: 0;
-  width: 49.5%;
+.header {
+  margin: 0 auto;
+  width: 500px;
 }
+
 
 .logo {
   background-color: #9EABB5;
@@ -51,29 +42,45 @@ button {
 }
 
 form {
-  padding: 0;
-  margin: 0;
-  width: 100%;
+  padding: 10px;
+  margin: 0 auto;
+  width: 480px;
 }
 
 #formValueID {
   font-size: 1.25em;
   font-weight: 200;
   height: 50px;
+  margin: 0 auto;
+  margin-top: 10px;
   text-align: center;
-  width: 55%
+  width: 98%
 }
 
 #submitButton {
   background-color: white;
   border: none;
-  display: inline;
+  display: inline-block;
   height: 50px;
   font-size: 1.25em;
   font-weight: 200;
-  margin: 1em auto;
+  margin: 10px auto;
   padding: 0;
-  width: 43%;
+  width: 49%;
+}
+
+button {
+  background-color: black;
+  border: none;
+  color: white;
+  display: inline-block;
+  height: 50px;
+  font-size: 1.25em;
+  font-weight: 200;
+  margin: 10px auto;
+  margin-top: 10px;
+  padding: 0;
+  width: 49%;
 }
 
 .grid {
