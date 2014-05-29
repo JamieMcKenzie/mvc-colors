@@ -11,8 +11,9 @@ ColorApp.View.prototype = {
 
   appendSavedGrids: function(gallery){
                       var grids = gallery.grids;
+                      $(".saved-grids").html("");
                       for (var i = 0; i < grids.length; i++) {
-
+                          $(".saved-grids").append("<ul id=" + i + "></ul>")
                       }
   },
 
