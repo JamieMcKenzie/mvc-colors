@@ -3,7 +3,7 @@ ColorApp.View = function(opts){
 }
 
 ColorApp.View.prototype = {
-  loadDefaultGrid: function(grid){
+  displayDefaultGrid: function(grid){
                       if (grid.tiles){
                         this.updateGridImage(grid.tiles);
                       }

@@ -4,10 +4,10 @@ ColorApp.Controller = function(config){
 };
 
 ColorApp.Controller.prototype = {
-  makeNewGrid: function() {
+  loadDefaultGrid: function() {
               this.grid = new Grid();
               this.populateGrid(this.grid);
-              this.view.loadDefaultGrid(this.grid);
+              this.view.displayDefaultGrid(this.grid);
   },
 
   populateGrid: function(grid) {
@@ -18,9 +18,10 @@ ColorApp.Controller.prototype = {
 
   colorTile: function(e) {
                 var index = e.target.getAttribute('id');
+                var tile = this.grid.tiles[index]
                 var newColor = this.randColor();
-                this.grid.tiles[index].setColor(newColor);
-                this.view.setColor(this, index);
+                tile.setColor(newColor);
+                this.view.setColor(tile, index);
   },
 
   randColor: function(){
