@@ -23,7 +23,7 @@ ColorApp.Binder.prototype = {
                           var controller = this.controller,
                           but = this.targets.tileSelector;
 
-                          $("li").on('click', function(e){
+                          $(".default-grid ul li").on('click', function(e){
                             controller.colorTile(e);
                           })
   },

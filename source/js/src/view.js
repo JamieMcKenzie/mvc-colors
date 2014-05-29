@@ -13,14 +13,16 @@ ColorApp.View.prototype = {
                       var grids = gallery.grids;
                       $(".saved-grids").html("");
                       for (var i = 0; i < grids.length; i++) {
-                          $(".saved-grids").append("<ul id=" + i + "></ul>")
+                        $(".saved-grids").append("<ul class=" + i + "></ul>");
+                        this.updateGridImage(grids[i].tiles, ".saved-grids ul." + i);
                       }
   },
 
-  updateGridImage: function(tiles) {
+  updateGridImage: function(tiles, selector) {
+                      var gridSelector = selector || this.opts.gridSelector
                       if (tiles) {
                         for (var i = 0; i < tiles.length; i++) {
-                          $(this.opts.gridSelector).append( "<li id=" + i + "></li>" );
+                          $(gridSelector).append( "<li class=" + i + "></li>" );
                           this.setColor(tiles[i], i);
                         }
                       }
@@ -28,7 +30,8 @@ ColorApp.View.prototype = {
 
   setColor: function(tile, index) {
                 var n = +index + 1;
-                $(this.opts.tileSelector + ":nth-child( " + n + " )").css("background-color", tile.color)
+                // $(this.opts.tileSelector + ":nth-child( " + n + " )").css("background-color", tile.color)
+                $(".default-grid ul li:nth-child( " + n + ")").css("background-color", tile.color)
   },
 }
 

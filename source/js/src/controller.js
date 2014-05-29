@@ -17,7 +17,7 @@ ColorApp.Controller.prototype = {
   },
 
   colorTile: function(e) {
-                var index = e.target.getAttribute('id');
+                var index = e.target.getAttribute('class');
                 var tile = this.grid.tiles[index]
                 var newColor = this.randColor();
                 tile.setColor(newColor);
