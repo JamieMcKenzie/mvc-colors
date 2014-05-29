@@ -18,10 +18,11 @@ ColorApp.Controller.prototype = {
 
   colorTile: function(e) {
                 var index = e.target.getAttribute('class');
+                var gridSelector = e.target.parentElement.parentElement.getAttribute('class') + " ul";
                 var tile = this.grid.tiles[index]
                 var newColor = this.randColor();
                 tile.setColor(newColor);
-                this.view.setColor(tile, index);
+                this.view.setColor(tile, index, gridSelector);
   },
 
   randColor: function(){
