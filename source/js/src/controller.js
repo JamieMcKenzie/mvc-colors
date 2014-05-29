@@ -7,11 +7,11 @@ ColorApp.Controller.prototype = {
   makeNewGrid: function() {
               this.grid = new Grid();
               this.populateGrid(this.grid);
-              this.view.update(this);
+              this.view.loadDefaultGrid(this.grid);
   },
 
   populateGrid: function(grid) {
-                  for (var i = 0; i <= grid.size; i++){
+                  for (var i = 0; i < grid.size; i++){
                     grid.addTile();
                   }
   },
@@ -30,7 +30,7 @@ ColorApp.Controller.prototype = {
   saveGrid: function(e){
                 this.grid.name = ($("#formValueID").val());
                 this.gridCollection.grids.push(this.grid);
-                this.view.update(this);
+                this.view.update(this.gridCollection);
   },
 
 }
