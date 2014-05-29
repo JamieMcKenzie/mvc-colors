@@ -15,7 +15,7 @@ ColorApp.Binder.prototype = {
                           but = this.targets.clearGridAction;
 
                           $(but).on('click', function(){
-                            controller.makeNewGrid();
+                            controller.loadDefaultGrid();
                           })
   },
 

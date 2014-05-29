@@ -31,7 +31,7 @@ ColorApp.Controller.prototype = {
   saveGrid: function(e){
                 this.grid.name = ($("#formValueID").val());
                 this.gridCollection.grids.push(this.grid);
-                this.view.update(this.gridCollection);
+                this.view.appendSavedGrids(this.gridCollection);
   },
 
 }

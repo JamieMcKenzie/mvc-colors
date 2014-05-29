@@ -9,22 +9,19 @@ ColorApp.View.prototype = {
                       }
   },
 
+  appendSavedGrids: function(gallery){
+                      var grids = gallery.grids;
+                      for (var i = 0; i < grids.length; i++) {
+
+                      }
+  },
+
   updateGridImage: function(tiles) {
                       if (tiles) {
                         for (var i = 0; i < tiles.length; i++) {
                           $(this.opts.gridSelector).append( "<li id=" + i + "></li>" );
                           this.setColor(tiles[i], i);
                         }
-                        // if (data.gridCollection.grids.length > 0) {
-                        //   var gallery = data.gridCollection.grids;
-                        //   for (var i = 0; i < gallery.length; i++) {
-                        //     $(".savedGrids").append( "<ul id=" + i + "></ul> ");
-                        //     for (var j = 0; j < gallery[i].tiles.size; j++) {
-                        //       $(".savedGrids").append( "<li id=" + j + "></li>" );
-                        //       this.setColor(data, j);
-                        //     }
-                        //   }
-                        // }
                       }
   },
 
