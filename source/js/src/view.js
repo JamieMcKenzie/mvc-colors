@@ -30,8 +30,8 @@ ColorApp.View.prototype = {
 
   setColor: function(tile, index) {
                 var n = +index + 1;
-                // $(this.opts.tileSelector + ":nth-child( " + n + " )").css("background-color", tile.color)
-                $(".default-grid ul li:nth-child( " + n + ")").css("background-color", tile.color)
+                console.log(tile);
+                $(this.opts.tileSelector + ":nth-child( " + n + " )").css("background-color", tile.color)
   },
 }
 
