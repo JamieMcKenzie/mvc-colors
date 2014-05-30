@@ -18,7 +18,7 @@ ColorApp.Controller.prototype = {
 
   colorTile: function(e) {
                 var index = e.target.getAttribute('class');
-                var gridSelector = e.target.parentElement.parentElement.getAttribute('class') + " ul";
+                var gridSelector = "." + e.target.parentElement.parentElement.getAttribute('class') + " ul";
                 var tile = this.grid.tiles[index]
                 var newColor = this.randColor();
                 tile.setColor(newColor);
@@ -30,9 +30,14 @@ ColorApp.Controller.prototype = {
   },
 
   saveGrid: function(e){
-                this.grid.name = ($("#formValueID").val());
+                // this.grid.name = ($("#formValueID").val());
                 this.gridCollection.grids.push(this.grid);
+                for (var i = 0; i < this.gridCollection.grids; i++){
+                }
                 this.view.appendSavedGrids(this.gridCollection);
+                console.log(this.grid);
+
+                console.log(this.gridCollection.grids);
   },
 
 }
