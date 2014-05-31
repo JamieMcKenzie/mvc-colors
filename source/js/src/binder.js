@@ -15,7 +15,7 @@ ColorApp.Binder.prototype = {
                           but = this.targets.clearGridAction;
 
                           $(but).on('click', function(){
-                            controller.makeNewGrid();
+                            controller.loadDefaultGrid();
                           })
   },
 
@@ -23,7 +23,7 @@ ColorApp.Binder.prototype = {
                           var controller = this.controller,
                           but = this.targets.tileSelector;
 
-                          $("li").on('click', function(e){
+                          $(".default-grid ul li").on('click', function(e){
                             controller.colorTile(e);
                           })
   },

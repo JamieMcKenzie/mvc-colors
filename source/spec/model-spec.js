@@ -1,4 +1,4 @@
-describe ("Grid", function(){
+  describe ("Grid", function(){
   var grid;
   var tile;
 

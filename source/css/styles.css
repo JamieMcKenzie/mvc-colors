@@ -9,7 +9,6 @@ body {
 }
 
 .wrapper {
-  border: 1px solid black;
   margin: 0 auto;
   padding: 15px 15px 15px 15px;
   width: 500px;
@@ -83,13 +82,14 @@ button {
   width: 49%;
 }
 
-.grid {
+.default-grid {
   margin: 0 auto;
   padding: 5px 5px 5px 5px;
   width: 500px;
 }
 
 ul {
+  border: 1px solid black;
   height: 500px;
   margin: 0 auto;
   padding: 0;
