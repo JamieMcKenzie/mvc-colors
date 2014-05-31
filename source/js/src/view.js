@@ -29,11 +29,8 @@ ColorApp.View.prototype = {
   },
 
   setColor: function(tile, index, gridSelector) {
-              // console.log("i = " + index + ", tile color= " + tile.color + ", grid = " + gridSelector);
               var n = +index + 1;
-              // console.log(gridSelector + " " + this.opts.tileSelector + ":nth-child( " + n + " )")
               $(gridSelector + " " + this.opts.tileSelector + ":nth-child( " + n + " )").css("background-color", tile.color)
-              // $(".default-grid ul li:nth-child( " + n + " )").css("background-color", tile.color);
   },
 }
 

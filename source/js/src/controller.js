@@ -37,22 +37,22 @@ ColorApp.Controller.prototype = {
                 return colors;
   },
 
-  saveGrid: function(e){
-                var colors = this.getColors(e);
-                var grid = new Grid(colors.length);
-                grid.name = ($("#formValueID").val());
-                this.populateGrid(grid);
-                for (var i = 0; i < colors.length; i++) {
-                  grid.tiles[i].color = colors[i];
-                }
-                this.gridCollection.grids.push(grid);
-                for (var i = 0; i < this.gridCollection.grids.length; i++){
-                  console.log(this.gridCollection.grids[i]);
-                }
-                // this.view.appendSavedGrids(this.gridCollection);
-                // console.log(this.grid);
+  makeNewColoredGrid: function(e){
+                    var colors = this.getColors(e);
+                    var grid = new Grid(colors.length);
+                    grid.name = ($("#formValueID").val());
+                    this.populateGrid(grid);
+                    for (var i = 0; i < colors.length; i++) {
+                      grid.tiles[i].color = colors[i];
+                    }
+                    return grid;
 
-                // console.log(this.gridCollection.grids);
+  },
+
+  saveGrid: function(e){
+                var grid = this.makeNewColoredGrid(e);
+                this.gridCollection.grids.push(grid);
+                this.view.appendSavedGrids(this.gridCollection);
   },
 
 }
