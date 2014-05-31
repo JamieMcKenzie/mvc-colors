@@ -29,15 +29,30 @@ ColorApp.Controller.prototype = {
                 return "#" + Math.floor(Math.random()*16777215).toString(16);
   },
 
-  saveGrid: function(e){
-                // this.grid.name = ($("#formValueID").val());
-                this.gridCollection.grids.push(this.grid);
-                for (var i = 0; i < this.gridCollection.grids; i++){
+  getColors: function(e){
+                var colors = new Array();
+                for (var i = 0; i < this.grid.size; i++) {
+                  colors.push(this.grid.tiles[i].color);
                 }
-                this.view.appendSavedGrids(this.gridCollection);
-                console.log(this.grid);
+                return colors;
+  },
 
-                console.log(this.gridCollection.grids);
+  saveGrid: function(e){
+                var colors = this.getColors(e);
+                var grid = new Grid(colors.length);
+                grid.name = ($("#formValueID").val());
+                this.populateGrid(grid);
+                for (var i = 0; i < colors.length; i++) {
+                  grid.tiles[i].color = colors[i];
+                }
+                this.gridCollection.grids.push(grid);
+                for (var i = 0; i < this.gridCollection.grids.length; i++){
+                  console.log(this.gridCollection.grids[i]);
+                }
+                // this.view.appendSavedGrids(this.gridCollection);
+                // console.log(this.grid);
+
+                // console.log(this.gridCollection.grids);
   },
 
 }
