@@ -14,15 +14,21 @@ body {
   width: 500px;
 }
 
-h1 {
-  font-weight: 200;
-}
-
-.header {
+header {
   margin: 0 auto;
   width: 500px;
 }
 
+h1 {
+  font-weight: 200;
+}
+
+h2 {
+  font-size: 1.25em;
+  font-weight: 200;
+  margin: 0;
+  padding: 0;
+}
 
 .logo {
   background-color: #9EABB5;
