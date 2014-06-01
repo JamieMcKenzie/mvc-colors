@@ -10,7 +10,13 @@ body {
 
 .wrapper {
   margin: 0 auto;
-  padding: 15px 15px 15px 15px;
+  padding: 0;
+  width: 500px;
+}
+
+header {
+  margin: 0 auto;
+  margin-top: 10px;
   width: 500px;
 }
 
@@ -18,11 +24,12 @@ h1 {
   font-weight: 200;
 }
 
-.header {
-  margin: 0 auto;
-  width: 500px;
+h2 {
+  font-size: 1.25em;
+  font-weight: 200;
+  margin: 0px 2px;
+  padding: 0;
 }
-
 
 .logo {
   background-color: #9EABB5;
@@ -41,9 +48,9 @@ h1 {
 }
 
 form {
-  padding: 10px;
+  padding: 0px;
   margin: 0 auto;
-  width: 480px;
+  width: 500px;
 }
 
 #formValueID {
@@ -52,8 +59,9 @@ form {
   height: 50px;
   margin: 0 auto;
   margin-top: 10px;
+  padding: 0;
   text-align: center;
-  width: 98%
+  width: 496px;
 }
 
 #submitButton {
@@ -65,7 +73,7 @@ form {
   font-weight: 200;
   margin: 10px auto;
   padding: 0;
-  width: 49%;
+  width: 49.5%;
 }
 
 button {
@@ -79,17 +87,16 @@ button {
   margin: 10px auto;
   margin-top: 10px;
   padding: 0;
-  width: 49%;
+  width: 49.5%;
 }
 
 .default-grid {
   margin: 0 auto;
-  padding: 5px 5px 5px 5px;
+  padding: 0px;
   width: 500px;
 }
 
 ul {
-  border: 1px solid black;
   height: 500px;
   margin: 0 auto;
   padding: 0;
@@ -100,7 +107,30 @@ ul {
 li {
   display: block;
   float: left;
-  height: 23.75%;
+  height: 120px;
   margin: 2.5px 2px;
-  width: 23.75%;
+  width: 24.2%;
+}
+
+.saved-grids {
+  margin: 0 auto;
+  padding: 15px 15px 15px 15px;
+  width: 1100px;
+}
+
+.saved-grids ul {
+  display: block;
+  height: 350px;
+  float: left;
+  margin: 10px;
+  padding: 0;
+  position: relative;
+  width: 31%;
+}
+
+.saved-grids li {
+  display: block;
+  height: 70px;
+  margin: 2.5px 2px;
+  width: 23.79%;
 }

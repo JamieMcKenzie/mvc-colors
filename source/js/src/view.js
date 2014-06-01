@@ -12,8 +12,8 @@ ColorApp.View.prototype = {
   appendSavedGrids: function(gallery){
                       var grids = gallery.grids;
                       $(".saved-grids").html("");
-                      for (var i = 0; i < grids.length; i++) {
-                        $(".saved-grids").append("<ul class=" + i + "></ul>");
+                      for (var i = grids.length - 1; i > 0; i--) {
+                        $(".saved-grids").append("<ul class=" + i + "><h2><b> Saved Grid: </b>" + grids[i].name + "</h2></ul>");
                         this.updateGridImage(grids[i].tiles, ".saved-grids ul." + i);
                       }
   },
@@ -29,8 +29,7 @@ ColorApp.View.prototype = {
   },
 
   setColor: function(tile, index, gridSelector) {
-              var n = +index + 1;
-              $(gridSelector + " " + this.opts.tileSelector + ":nth-child( " + n + " )").css("background-color", tile.color)
+              $(gridSelector + " " + this.opts.tileSelector + "." + index).css("background-color", tile.color)
   },
 }
 
