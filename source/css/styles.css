@@ -26,7 +26,7 @@ h1 {
 h2 {
   font-size: 1.25em;
   font-weight: 200;
-  margin: 0;
+  margin: 2px;
   padding: 0;
   width: 40%;
 }
@@ -115,17 +115,17 @@ li {
 .saved-grids {
   margin: 0 auto;
   padding: 15px 15px 15px 15px;
-  width: 1000px;
+  width: 1100px;
 }
 
 .saved-grids ul {
   display: block;
   height: 350px;
   float: left;
-  margin: 0;
+  margin: 10px;
   padding: 0;
   position: relative;
-  width: 33%;
+  width: 31%;
 }
 
 .saved-grids li {
