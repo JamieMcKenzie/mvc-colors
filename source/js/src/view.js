@@ -13,7 +13,7 @@ ColorApp.View.prototype = {
                       var grids = gallery.grids;
                       $(".saved-grids").html("");
                       for (var i = (grids.length - 1); i > 0; i--) {
-                        $(".saved-grids").append("<h2> Saved Grid:" + grids[i].name + "</h2><ul class=" + i + "></ul>");
+                        $(".saved-grids").append("<ul class=" + i + "><h2> Saved Grid:" + grids[i].name + "</h2></ul>");
                         this.updateGridImage(grids[i].tiles, ".saved-grids ul." + i);
                       }
   },

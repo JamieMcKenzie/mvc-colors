@@ -28,6 +28,7 @@ h2 {
   font-weight: 200;
   margin: 0;
   padding: 0;
+  width: 40%;
 }
 
 .logo {
@@ -106,7 +107,30 @@ ul {
 li {
   display: block;
   float: left;
-  height: 23.75%;
+  height: 120px;
   margin: 2.5px 2px;
-  width: 23.75%;
+  width: 24.2%;
+}
+
+.saved-grids {
+  margin: 0 auto;
+  padding: 15px 15px 15px 15px;
+  width: 1000px;
+}
+
+.saved-grids ul {
+  display: block;
+  height: 350px;
+  float: left;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 33%;
+}
+
+.saved-grids li {
+  display: block;
+  height: 70px;
+  margin: 2.5px 2px;
+  width: 23.79%;
 }
