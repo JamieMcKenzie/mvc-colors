@@ -8,7 +8,7 @@ $('document').ready(function(){
     saveGridAction: "submit",
   };
 
-  view = new ColorApp.View( {
+  view = new ColorApp.View({
     gridSelector: ".default-grid ul",
     tileSelector: "li",
   });
