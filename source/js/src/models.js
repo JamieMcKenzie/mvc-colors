@@ -1,3 +1,4 @@
+/* Seem good */
 function GridCollection() {
   this.grids = new Array();
 }
