@@ -16,7 +16,7 @@ $('document').ready(function(){
   controller = new ColorApp.Controller({view: ColorApp.view});
   controller.loadDefaultGrid();
 
-  binder = new ColorApp.Binder(selectors, ColorApp.controller);
+  binder = new ColorApp.Binder(selectors, controller);
   binder.bind();
 })
 
