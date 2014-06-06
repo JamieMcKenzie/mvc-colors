@@ -1,5 +1,3 @@
-var ColorApp = {};
-
 function GridCollection() {
   this.grids = new Array();
 }

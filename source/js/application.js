@@ -1,3 +1,5 @@
+ColorApp = {}; // This is the top-level file, define your namespace here
+
 $('document').ready(function(){
   var selectors = {
     makeGridAction: "button.new",
