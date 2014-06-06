@@ -36,8 +36,5 @@ ColorApp.Binder.prototype = {
       controller.saveGrid(e);
       e.preventDefault();
     })
-  },
-
-
-
+  }
 }
